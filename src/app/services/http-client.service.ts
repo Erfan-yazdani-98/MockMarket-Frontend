@@ -15,8 +15,6 @@ import { Like } from '../models/like';
 })
 export class HttpClientService {
   // private baseUrl: string = "http://localhost:8090";
-  // private baseUrl: string = 'http://207.154.219.47:8090';
-  // private baseUrl: string = 'http://app:8080'; // Using service name defined in docker-compose.yml
   private baseUrl: string;
 
   constructor(
@@ -26,7 +24,7 @@ export class HttpClientService {
     if (window.location.hostname === 'localhost') {
       this.baseUrl = 'http://localhost:8090'; // For local development
     } else {
-      this.baseUrl = 'http://207.154.219.47:8090'; // Update for your server's IP for production environment
+      this.baseUrl = 'http://xxx.xxx.xxx.xx:8090'; // Update for your server's IP for production environment
     }
   }
 
