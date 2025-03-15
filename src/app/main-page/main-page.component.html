@@ -1,0 +1,17 @@
+<main>
+  <div *ngIf="loading" class="loading-panel">
+    <div class="loader"></div>
+    <p>{{loadingMessage}}</p>
+  </div>
+  <div *ngIf="!loading">
+    <app-carousel></app-carousel>
+    <app-vetrina></app-vetrina>
+    <app-main-page-product-list [products]="offerProducts" listTitle="Special Offers" backgroundColor="#ff0000" textColor="#fff"></app-main-page-product-list>
+    <app-brands-window></app-brands-window>
+    <app-main-page-product-list [products]="bestSellerProducts" listTitle="Best Sellers" icon="fa-solid fa-fire"></app-main-page-product-list>
+    <app-main-page-product-list [products]="popularProducts" listTitle="Popular products" icon="fa-solid fa-thumbs-up"></app-main-page-product-list>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+

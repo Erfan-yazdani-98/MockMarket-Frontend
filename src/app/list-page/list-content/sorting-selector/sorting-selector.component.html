@@ -1,0 +1,9 @@
+<div class="sorting-container" #sortingContainer>
+    <div><i class="fa-solid fa-arrow-down-wide-short"></i>Sorting:</div>
+    <div class="sorting-option selected" (click)="sortClick(newest,1)" #newest>Newest</div>
+    <div class="sorting-option" (click)="sortClick(viewed,2)" #viewed>Most Viewed</div>
+    <div class="sorting-option" (click)="sortClick(bestseller,3)" #bestseller>Best Sellers</div>
+    <div class="sorting-option" (click)="sortClick(cheapest,4)" #cheapest>Cheapest</div>
+    <div class="sorting-option" (click)="sortClick(expensive,5)" #expensive>Most Expensive</div>
+    <div class="sorting-option" (click)="sortClick(popular,6)" #popular>Most Popular</div>
+  </div>

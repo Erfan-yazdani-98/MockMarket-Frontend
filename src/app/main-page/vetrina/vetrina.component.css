@@ -1,0 +1,85 @@
+  /* icons window of categories */
+  .vetrina {
+    margin: 10px 0px;
+    background-color: #c0c0c0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  .vetrina-item {
+    flex: 1;
+    display: flex;
+    font-weight: 550;
+    flex-direction: column; /* Stack items vertically, reversed */
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  .vetrina-icon {
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 100%;
+    color: white;
+    font-size: 40px;
+    width: 50px;
+    height: 40px;
+    box-shadow: 0px 5px 12px rgba(50, 50, 50, 0.9);
+    transition: font-size 0.3s, transform 0.3s;
+  }
+  .vetrina-icon:hover {
+    font-size: 50px;
+  }
+
+   /* media query */
+   @media screen and (max-width: 900px) {
+      .vetrina {
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);
+        
+      }
+  }
+  @media screen and (max-width: 600px) {
+    .vetrina-icon {
+        display: flex;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        border-radius: 100%;
+        color: white;
+        font-size: 30px;
+        width: 37px;
+        height: 30px;
+        box-shadow: 0px 5px 12px rgba(50, 50, 50, 0.9);
+        transition: font-size 0.3s, transform 0.3s;
+      }
+      .vetrina-icon:hover {
+        font-size: 40px;
+      }
+  }
+  @media screen and (max-width: 500px) {
+    .vetrina-icon {
+      display: flex;
+      background-color: red;
+      justify-content: center;
+      align-items: center;
+      padding: 9px;
+      border-radius: 100%;
+      color: white;
+      font-size: 20px;
+      width: 25px;
+      height: 20px;
+      box-shadow: 0px 5px 12px rgba(50, 50, 50, 0.9);
+      transition: font-size 0.3s, transform 0.3s;
+    }
+    .vetrina-icon:hover {
+      font-size: 30px;
+    }
+    .vetrina-item{
+      font-size: 10px;
+    }
+  }

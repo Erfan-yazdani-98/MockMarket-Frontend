@@ -1,0 +1,58 @@
+<h3 class="range-title">Price</h3>
+<div class="double-slider-box">
+  <div class="range-slider">
+    <span class="slider-track" #range></span>
+    <input
+      type="range"
+      name="min_val"
+      class="min-val"
+      min=0
+      max=5000
+      value=0
+      (input)="slideMin()"
+      (mouseup)="slideValueChanged()"
+      (touchend)="slideValueChanged()"
+      #minVal
+    />
+    <input
+      type="range"
+      name="max_val"
+      class="max-val"
+      min=0
+      max=5000
+      value=5000
+      (input)="slideMax()"
+      (mouseup)="slideValueChanged()"
+      (touchend)="slideValueChanged()"
+      #maxVal
+    />
+    <div class="tooltip min-tooltip" #minTooltip></div>
+    <div class="tooltip max-tooltip" #maxTooltip></div>
+  </div>
+  <div class="input-box">
+    <div class="min-box">
+      <div class="input-wrap">
+        <span class="input-addon">€</span>
+        <input
+          type="text"
+          name="min_input"
+          class="input-field min-input"
+          (input)="setMinInput(false)"
+          #priceInputMin
+        />
+      </div>
+    </div>
+    <div class="max-box">
+      <div class="input-wrap">
+        <span class="input-addon">€</span>
+        <input
+          type="text"
+          name="max_input"
+          class="input-field max-input"
+          (input)="setMaxInput(false)"
+          #priceInputMax
+        />
+      </div>
+    </div>
+  </div>
+</div>

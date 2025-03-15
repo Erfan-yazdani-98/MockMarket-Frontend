@@ -1,0 +1,23 @@
+.title{
+    margin-left: 20px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 40px;
+}
+.title i {
+    background-color: #333;
+    color: whitesmoke;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+.title div{
+    padding: 5px;
+}
+.title h2, .title p{
+    margin: 0;
+    padding: 0;
+}

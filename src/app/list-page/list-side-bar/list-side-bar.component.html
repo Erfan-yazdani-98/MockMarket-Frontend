@@ -1,0 +1,21 @@
+<aside class="sidebar small-screen-remove">
+    <h1 class="category-title">{{selectionTypeTitle}}</h1>
+    <div class="filter-section">
+      <h2>Filters</h2>
+
+      <div class="filter">
+        <label>
+          <input type="checkbox" id="in-stock" (change)="inStockCheckChange($event)" /> Only show in-stock items
+        </label>
+      </div>
+      <div class="filter">
+        <app-price-filter (sendPriceRange)="receivePriceRange($event)"></app-price-filter>
+      </div>
+      <div class="filter brands" *ngIf="filterList.brands">
+        <h3>Brands:</h3>
+        <div>
+          <p *ngFor="let brand of filterList.brands"><input type="checkbox" (change)="brandChecksChange($event,brand.id)"/> {{brand.name}}</p>
+        </div>
+      </div>
+    </div>
+  </aside>

@@ -1,0 +1,31 @@
+.star-rating, .stars-container{
+    margin: 0;
+}
+
+.star-outer{
+    position: relative;
+    display: inline-block;
+}
+.star-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    
+    /* width: 70%; */
+    overflow: hidden;
+}
+.star-outer::before{
+    content: "\2605 \2605 \2605 \2605 \2605";
+    color: #7778;
+    display: inline-block;
+}
+.star-inner::before{
+    content: "\2605 \2605 \2605 \2605 \2605";
+    color: gold;
+    display: inline-block;
+}
+.stars-container span{
+    font-size: 12px;
+    color: black;
+}

@@ -1,0 +1,4 @@
+<main style="display: flex;">
+    <app-list-side-bar (sendFilters)="receiveFilters($event)"></app-list-side-bar>
+    <app-list-content style="flex: 1;" [products]="products" (sendSorting)="receiveSorting($event)" (sendPagination)="receivePagination($event)" [totalPages]="totalPages" [currentPage]="currentPage"></app-list-content>
+</main>

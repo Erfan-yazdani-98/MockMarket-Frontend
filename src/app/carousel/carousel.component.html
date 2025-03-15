@@ -1,0 +1,50 @@
+<div class="carousel-container">
+  <div class="swiper mySwiper" #mySwiper>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" [routerLink]="['/products']" [queryParams]="{ subcategory: 2 }">
+        <img src="carousel/01.jpg" alt="" style="width: 100%" />
+        <div class="carousel-caption">
+          <h3>Power your day</h3>
+          <p class="small-screen-remove">Grab the latest laptops now</p>
+        </div>
+      </div>
+      <div class="swiper-slide" [routerLink]="['/products']" [queryParams]="{ subcategory: 10 }">
+        <img src="carousel/03.jpg" alt="" style="width: 100%" />
+        <div class="carousel-caption">
+          <h3>Glow up!</h3>
+          <p class="small-screen-remove">
+            Discover our exclusive beauty products
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide" [routerLink]="['/products']" [queryParams]="{ subcategory: 7 }">
+        <img src="carousel/04.jpg" alt="" style="width: 100%" />
+        <div class="carousel-caption">
+          <h3>Elevate your style</h3>
+          <p class="small-screen-remove">Check out our stunning watches</p>
+        </div>
+      </div>
+      <div class="swiper-slide" [routerLink]="['/products']" [queryParams]="{ subcategory: 1 }">
+        <img src="carousel/05.jpg" alt="New York" style="width: 100%" />
+        <div class="carousel-caption">
+          <h3>Stay ahead</h3>
+          <p class="small-screen-remove">
+            Get the latest smartphones today!
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control prev" (click)="goPrev()">&#10094;</button>
+    <button class="carousel-control next" (click)="goNext()">&#10095;</button>
+    
+    <!-- Dot indicators -->
+    <!-- <div class="carousel-indicators">
+      <span class="dot active" (click)="dotClick(0)"></span>
+      <span class="dot" (click)="dotClick(1)"></span>
+      <span class="dot" (click)="dotClick(2)"></span>
+      <span class="dot" (click)="dotClick(3)"></span>
+    </div> -->
+    
+  </div>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="cart">
+    <div class="cart-info">€{{calculateTotalPrice()}}</div>
+    <div class="cart-icon">
+      <i class="fa-solid fa-cart-shopping .cart-icon"></i>
+      <span class="cart-count">{{cartItems.length}}</span>
+    </div>
+    <div class="cart-dropdown" *ngIf="cartItems.length>0">
+      
+       <div class="cart-item" *ngFor="let cartItem of cartItems">
+        <img [src]="cartItem.product.thumbnailImage" alt="image" />
+        <p class="item-title">{{cartItem.product.name}}</p>
+        <p class="item-quantity">X {{cartItem.quantity}}</p>
+        <p class="item-quantity">€{{formatNumber(((cartItem.product.isOffer?cartItem.product.offerPrice:cartItem.product.price)||0)*cartItem.quantity)}}</p>
+        <div class="delete-btn" (click)="removeItem(cartItem.product.id)"><i class="fa-solid fa-trash"></i></div>
+       </div>
+
+      <button class="proceed-btn" disabled="true" title="Not Implemented">Proceed to Checkout</button>
+    </div>
+  </div>

@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+main {
+  margin-top: 120px;
+}
+.disabledlink {
+  /* pointer-events: none; */
+}
+
+/* brands */
+.brand-container {
+  position: relative;
+  overflow: scroll; /* Hide scrollbar */
+  padding: 8px; /* Add padding to have some margin between title and items */
+  display: flex; /* Use flexbox for proper alignment of items */
+  cursor: grab; /* Change cursor to indicate draggable */
+  align-items: center;
+}
+.brand-item {
+  display: inline-block; /* Display items inline for horizontal layout */
+  background-color: white; /* Item background */
+  margin-right: 10px;
+  padding: 10px;
+  min-width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px #c0c0c0 solid;
+}
+.brand-item img {
+  width: 120px;
+  max-height: 120px;
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.large-screen-remove-flex {
+  display: none;
+}
+.large-screen-remove {
+  display: none;
+}
+.navabar-small-page {
+  display: none;
+}
+
+/* media query */
+@media screen and (max-width: 700px) {
+  .small-screen-remove {
+    display: none;
+  }
+  .large-screen-remove-flex {
+    display: flex;
+  }
+  .large-screen-remove {
+    display: block;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

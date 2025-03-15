@@ -1,0 +1,13 @@
+<!-- when we are in page 1 = current page=0  -->
+<div class="pagination">
+    <a (click)="onPageChange(1)" [class.disabled]="currentPage === 0">&laquo;</a>
+    
+    <a 
+        *ngFor="let page of pages" 
+        [class.active]="page === currentPage+1" 
+        (click)="onPageChange(page)">
+        {{ page }}
+    </a>
+    
+    <a (click)="onPageChange(totalPages)" [class.disabled]="currentPage === totalPages-1">&raquo;</a>
+</div>

@@ -1,0 +1,46 @@
+<div class="bg-dark" id="bg-dark" (click)="showMenu()" #bgDark></div>
+<header class="header-base">
+    <div class="header-top">
+      <div class="logo cursor-pointer" [routerLink]="['']">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <p class="small-screen-remove cursor-pointer" [routerLink]="['']">Mock Market</p>
+      <app-search class="search"></app-search>
+      <app-login-button></app-login-button>
+      <app-cart-button></app-cart-button>
+      
+    </div>
+    <div class="header-bottom">
+      <div class="navbar">
+        <div
+          class="nav-toggle large-screen-remove-flex toggle-icon"
+          id="toggle-icon"
+          (click)="showMenu()"
+          #toggleIcon
+        >
+          <div class="nav-toggle-link"></div>
+        </div>
+        
+        <div *ngFor="let category of categoryList; let i = index" class="dropdown small-screen-remove">
+          <button class="dropbtn">{{ category.name }}</button>
+          <div class="dropdown-content">
+              <a *ngFor="let subcategory of subcategoryList[i]" [routerLink]="['/products']" [queryParams]="{ subcategory: subcategory.id }" >{{ subcategory.name }}</a>
+          </div>
+      </div>
+
+
+      </div>
+      <div class="navbar-small-page" id="navbar-small-page" #navbarSmallPage>
+        <div class="navbar-small-page-container" (mouseleave)="hideSubcategoryList()">
+          <div class="navbar-small-page-base">
+            <a class="navbar-small-page-item" *ngFor="let item of categoryList" (mouseover)="showSubcategoryList(item)">{{item.name}}</a>
+          </div>
+          <div class="navbar-small-page-subcategory" #smallPageSubCategoryList>
+            <a *ngFor="let item of subcategoryListSelected" (click)="showMenu()" [routerLink]="['/products']" [queryParams]="{ subcategory: item.id }">{{item.name}}</a>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

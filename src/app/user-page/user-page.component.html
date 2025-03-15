@@ -1,0 +1,12 @@
+<main *ngIf="user">
+    <div class="title">
+        <i class="fa-solid fa-user"></i>
+        <div>
+            <h2>{{user.username}}</h2>
+            <p>{{user.role}}</p>
+        </div>
+    </div>
+    <app-main-page-product-list [products]="favoriteProducts" listTitle="Your Favorite Products" icon="fa-solid fa-heart"></app-main-page-product-list>
+    <app-main-page-product-list [products]="bookmarkedProducts" listTitle="Your Bookmarked Products" icon="fa-solid fa-bookmark"></app-main-page-product-list>
+
+</main>

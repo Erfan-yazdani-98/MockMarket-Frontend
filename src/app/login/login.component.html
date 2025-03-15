@@ -1,0 +1,22 @@
+<div class="modal-content">
+    <div class="button-container">
+      <div mat-button [class.active]="isLoginActive" class="login-btn" (click)="panelSelector(true)">Login</div>
+      <div mat-button [class.active]="!isLoginActive" class="signup-btn" (click)="panelSelector(false)">Sign Up</div>
+    </div>
+  
+    <form *ngIf="isLoginActive; else signUpTemplate" class="content-container" (keydown.enter)="_handleEnter()">
+      <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required />
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div mat-button class="send-btn" (click)="login()">Login</div>
+    </form>
+  
+    <ng-template #signUpTemplate class="content-container" (keydown.enter)="_handleEnter()">
+      <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required />
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+      <input type="password" placeholder="Repeat Password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div mat-button class="send-btn" (click)="signUp()">Sign Up</div>
+    </ng-template>
+  </div>
+  

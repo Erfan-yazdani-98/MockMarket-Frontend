@@ -1,0 +1,26 @@
+<div class="product-list" [style.background-color]="backgroundColor" [style.color]="textColor">
+    <div class="product-list-title" [style.color]="textColor">
+      <i
+        [ngClass]="icon"
+        style="
+          width: 25px;
+          text-align: center;
+          border-radius: 50%;
+          padding: 5px;
+        "
+      ></i>
+      <span> {{listTitle}}:</span>
+    </div>
+    
+  <div class="swiper" #mySwiper>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let theProduct of products">
+        <app-product-card [product]="theProduct"></app-product-card>
+      </div>
+      
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+  </div>

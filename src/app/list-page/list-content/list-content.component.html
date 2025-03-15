@@ -1,0 +1,5 @@
+<app-sorting-selector (sendSorting)="receiveSorting($event)"></app-sorting-selector>
+<div class="product-list">
+    <app-product-card *ngFor="let theProduct of products" [product]="theProduct"></app-product-card>
+  </div>
+<app-pagination *ngIf="totalPages>1" [totalPages]="totalPages" [currentPage]="currentPage" (sendPagination)="receivePagination($event)"></app-pagination>

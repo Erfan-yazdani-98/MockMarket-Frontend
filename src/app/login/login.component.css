@@ -1,0 +1,61 @@
+.modal-content {
+  background-color: whitesmoke;
+    width: 300px;
+    height: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .login-btn, .signup-btn{
+    flex: 1;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #1c3d5a;
+    color: white;
+    border: 1px solid #1c3d5a;
+    margin: 2px;
+    border-radius: 5px;
+  }
+  .active {
+    background-color: #ff6f61;
+  }
+  .content-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    width:100%;
+    box-sizing: border-box;
+  }
+  .send-btn{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #33c1ff;
+    color: white;
+    border-radius: 5px;
+    margin-top: auto;
+  }
+  .error-message{
+    background-color: #ff6f61;
+    opacity: 0.5;
+    color: white;
+    font-size: 12px;
+    padding:0px 5px;
+    border-radius: 3px;
+  }
+  

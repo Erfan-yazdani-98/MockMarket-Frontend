@@ -1,0 +1,56 @@
+<p class="title">Most Popular Brands:</p>
+
+<div class="scroller" #scroller>
+  <ul class="tag-list scroller__inner" #scrollerInner>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 1 }">
+        <img src="logos/apple.png" alt="Apple Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 3 }">
+        <img src="logos/samsung.png" alt="Samsung Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 2 }">
+        <img src="logos/microsoft.png" alt="Microsoft Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 9 }">
+        <img src="logos/xiaomi.png" alt="Xiaomi Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 5 }">
+        <img src="logos/nike.png" alt="Nike Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 6 }">
+        <img src="logos/philips.png" alt="Philips Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 7 }">
+        <img src="logos/rayban.png" alt="Ray-Ban Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 10 }">
+        <img src="logos/asus.png" alt="Asus Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 4 }">
+        <img src="logos/sony.png" alt="Sony Logo" />
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" [queryParams]="{ brand: 16 }">
+        <img src="logos/soundcore.png" alt="Soundcore Logo" />
+      </a>
+    </li>
+  </ul>
+</div>

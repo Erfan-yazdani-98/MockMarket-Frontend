@@ -1,0 +1,9 @@
+<button *ngIf="user === null" class="login-btn" (click)="loginClick()">
+    <span class="small-screen-remove">Login/Signup</span>
+    <i class="fa-regular fa-user"></i>
+  </button>
+
+<div *ngIf="user !== null" class="dashboard-btn" [routerLink]="['dashboard']" title="Access Your Dashboard">
+  <i class="fa-regular fa-user"></i>
+  <span class="small-screen-remove">{{ user.username }}</span>
+</div>

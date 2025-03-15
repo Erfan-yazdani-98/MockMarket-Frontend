@@ -1,0 +1,5 @@
+<div class="quantity-container">
+    <button id="decrement" (click)="decrementQuantity()" [disabled]="quantity <= 1">-</button>
+    <input type="number" [(ngModel)]="quantity" min="1" readonly/>
+    <button id="increment" (click)="incrementQuantity()">+</button>
+</div>

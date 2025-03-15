@@ -1,0 +1,12 @@
+<div class="card" (click)="navigateToProduct(product.id)">
+    <div class="image-container">
+      <img [src]="product.thumbnailImage" alt="image" />
+      <span class="sale-percentage"  *ngIf="product.isOffer">{{product.salePercentage}}%</span>
+    </div>
+    <div class="title">{{product.name}}</div>
+    <app-star-rating [value]="product.rate!=null?product.rate:0" *ngIf="(product.rate==null || (product.rate!=null && product.rate>0))"></app-star-rating>
+    <div class="prices">
+      <span class="offer-price" *ngIf="product.isOffer">€{{product.offerPrice}}</span><br />
+      <span class="price" [ngClass]="{'price-discounted':product.isOffer}">€{{product.price}}</span>
+    </div>
+  </div>

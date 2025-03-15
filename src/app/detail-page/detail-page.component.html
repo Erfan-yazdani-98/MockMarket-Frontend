@@ -1,0 +1,61 @@
+<main>
+    
+    <div class="product-detail" *ngIf="product">
+        <div class="product-header">
+            <div class="product-title">
+                <h1>{{ product.name }}</h1>
+                <div class="product-description">
+                    <p>{{ product.shortDescription }}</p>
+                    <p>{{ product.longDescription }}</p>
+                    <div class="price">
+                        <h3 class="offer-price" *ngIf="product.isOffer">€{{product.offerPrice}}</h3>
+                        <h3 [ngClass]="{'offered-price': product.isOffer}">€{{product.price}}</h3>
+                    </div>
+                </div>
+                <div class="cart-info">
+                    <app-quantity-controller (sendQuantity)="receiveQuantity($event)"></app-quantity-controller>
+                    <button class="add-to-cart" (click)="addToCart()"><i class="fa-solid fa-cart-plus"></i> <span class="small-screen-remove">Add to Cart</span></button>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <div class="gallery-icons">
+                    <i [ngClass]="isFavorite ? 'fa-solid fa-heart' : 'fa-regular fa-heart'" (click)="toggleFavorite()" title="Favorite" [style.color]="isFavorite ? 'red' : 'grey'"></i>
+                    <i [ngClass]="isBookmark ? 'fa-solid fa-bookmark' : 'fa-regular fa-bookmark'" (click)="toggleBookmark()" title="Bookmark" [style.color]="isBookmark ? '#111' : 'grey'"></i>
+                </div>
+                <div class="large-image">
+                    <img id="mainImage" [src]="images[0]" alt="Main" #imageBox/>
+                </div>
+                <div class="thumbnail-container">
+                    <img class="thumbnail" *ngFor="let image of images | slice: 0:3; let i = index" [src]="image" alt="Thumbnail" (click)="changeImage(i);" />
+                </div>
+            </div>
+        </div>
+    
+    
+        <h2 class="details-title">Details</h2>
+        <div class="product-details">
+            <div class="detail-item">
+                <span class="detail-key">Brand:</span>
+                <span class="detail-value">{{ product.brand.name }}</span> <!-- Replace with product brand -->
+            </div>
+            <div class="detail-item">
+                <span class="detail-key">Category:</span>
+                <span class="detail-value">{{product.subCategory.category.name}}>{{ product.subCategory.name }}</span> <!-- Replace with product category -->
+            </div>
+            <div class="detail-item">
+                <span class="detail-key">In Stock:</span>
+                <span class="detail-value">{{ product.quantity ? 'Yes' : 'No' }}</span> <!-- Replace with inStock status -->
+            </div>
+            <div class="detail-item">
+                <span class="detail-key">Release Date:</span>
+                <span class="detail-value">{{getFormattedDate()}}</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-key">Rate:</span>
+                <span class="detail-value"><app-star-rating [value]="product.rate?product.rate:0"></app-star-rating></span>
+            </div>
+        </div>
+    </div>
+    
+
+</main>

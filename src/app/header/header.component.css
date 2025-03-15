@@ -1,0 +1,215 @@
+header {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #c0c0c0;
+  }
+  .header-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  .cursor-pointer{
+    cursor: pointer;
+  }
+  
+  .header-top {
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /*horizontally*/
+    align-items: center; /*vertically*/
+    padding: 10px 20px;
+  }
+  .header-top >:nth-child(4) {
+    margin-left: auto;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+
+  
+
+  
+  /*------------------------ NAVBAR ---------------------*/
+  .navbar {
+    overflow: hidden;
+    background-color: #1c3d5a;
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: #ff6f61;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  .nav-toggle-link {
+    /* margin: 1rem 0.5rem; */
+    position: relative;
+    transition: all 100ms ease-in;
+  }
+  .nav-toggle-link,
+  .nav-toggle-link::before,
+  .nav-toggle-link::after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    border-radius: 1rem;
+    background-color: #ddd;
+  }
+  .nav-toggle-link::before,
+  .nav-toggle-link::after {
+    position: absolute;
+  }
+  
+  .nav-toggle-link::before {
+    top: 0.6rem;
+    transition: all 150ms ease-in;
+  }
+  .nav-toggle-link::after {
+    bottom: 0.6rem;
+    transition: all 150ms ease-in;
+  }
+  .toggle-icon-cross .nav-toggle-link::before {
+    transform: translateY(-0.6rem) rotate(-45deg);
+  }
+  .toggle-icon-cross .nav-toggle-link::after {
+    transform: translateY(0.6rem) rotate(45deg);
+  }
+  .toggle-icon-cross .nav-toggle-link {
+    background-color: transparent;
+  }
+  .bg-dark--open {
+    position: fixed;
+    background-color: #3333337d;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: block;
+  }
+  .navbar-small-page {
+    pointer-events: none;
+    box-shadow: -2px 0 4px 0 rgb(0, 0, 0 / 13%);
+    height: 100vh -119px;
+    z-index: 201;
+    position: fixed !important;
+    top: 119px !important;
+    display: block !important;
+    /* width: 100vw; */
+    transform: translateX(-400px);
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar-small-page--open {
+    transform: translateY(0);
+  }
+  .navbar-small-page-container{
+    width: 100vw;
+    display: flex;
+  }
+  .navbar-small-page-base{
+    pointer-events: auto;
+    display: flex;
+    flex-direction:column;
+    background-color: #f4f4f4;
+  }
+  .navbar-small-page-subcategory{
+    pointer-events: auto;
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    background-color: #ddd;
+  }
+  .navbar-small-page-base a, .navbar-small-page-subcategory a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+  }
+  /* .navbar-small-page-base a:hover{
+    background-color: #ff6f61;
+    color: white;
+  }  */
+  
+  .navbar-small-page-subcategory a:hover{
+    background-color: #ccc;
+  }
+
+  @media screen and (max-width: 400px) {
+    .navbar-small-page a{
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 340px) {
+    .search{
+      display: none;
+    }
+  }
+  
+
+
+
+  
+  

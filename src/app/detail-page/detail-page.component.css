@@ -1,0 +1,157 @@
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    /* border-radius: 8px; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.product-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space below header */
+}
+
+.product-title {
+    flex: 1; /* Title takes available space */
+    margin-right: 20px; /* Space between title and image */
+}
+
+.offer-price{
+    color: green;
+    margin: 0px;
+    padding: 0px;
+}
+.offered-price{
+    color: gray;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: line-through;
+}
+
+.image-gallery {
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+.gallery-icons {
+    position: absolute; /* Positioning relative to the closest positioned ancestor */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 10; /* Ensure icons are above the image */
+}
+.gallery-icons i {
+    font-size: 2em;
+    margin: 0px 5px;
+    color: gray;
+    opacity: 0.5;
+}
+.gallery-icons i:hover {
+    opacity: 0.8;
+}
+
+.large-image{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+.large-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.thumbnail-container {
+    margin-top: 20px;
+    display: flex; 
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px; /* Thumbnail width */
+    height: 120px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between thumbnails */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 2px solid transparent; /* Border for active thumbnail */
+    border-radius: 4px; /* Optional rounded corners */
+    height: auto;
+    object-fit: contain;
+}
+
+.thumbnail:hover {
+    border-color: #33c1ff; /* Change border color on hover */
+}
+
+
+
+
+.product-description {
+    margin: 20px 0; /* Margins for the description */
+    font-size: 1.1em; /* Slightly larger font */
+}
+.cart-info{
+    display: flex;
+    align-items: center;
+}
+
+.add-to-cart {
+    height: 30px;
+    padding: 0px 10px;
+    
+    background-color: #33c1ff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.add-to-cart:hover {
+    background-color: #2ea9dd;
+}
+
+.details-title {
+    margin-top: 30px; 
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+.product-details {
+    border-top: 1px solid #ddd; 
+    padding-top: 15px; 
+}
+
+.detail-item {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 10px; 
+}
+
+.detail-key {
+    font-weight: bold; 
+}
+
+.detail-value {
+    color: #555; 
+}
+@media screen and (max-width: 600px) {
+    .product-detail{
+      font-size: 12px;
+    }
+    .image-gallery {
+        width: 150px;
+    }
+    .large-image{
+        height: 200px;
+    }
+    .thumbnail {
+        width: 40px;
+        height: 60px;
+    }
+  }
+

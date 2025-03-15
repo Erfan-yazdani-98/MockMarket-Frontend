@@ -1,0 +1,29 @@
+.sorting-container {
+    font-size: 0.8rem;
+    color: #777;
+    /* background-color: #33c1ff; */
+    margin: 10px 20px 5px 20px;
+    margin-bottom: 0px;
+    display: flex;
+    max-height: 20.5px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .sorting-container div {
+    padding: 3px;
+    margin-left: 5px;
+  }
+  .sorting-option{
+    cursor: pointer;
+  }
+  .selected{
+    color: #555;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 900px) {
+    .sorting-container {
+      font-size: 0.6rem;
+      margin: 10px 10px 5px 10px;
+    }
+  }
